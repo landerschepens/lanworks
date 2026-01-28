@@ -1,8 +1,23 @@
 /* src/index.css */
 :root {
-  --primary-blue: #1070CA;
-  --primary-blue-dark: #0d5a9f; /* darker shade for hover */
+  --primary-blue: #008DD0;
+  --primary-blue-dark: #1070CA; /* darker shade for hover */
 }
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/netto_ot.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/netto-ot-bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 
 
 /* --- Reset & base --- */
@@ -26,38 +41,128 @@ body {
   padding: 2rem;
 }
 
-/* --- Navbar --- */
-.navbar {
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+/* Navbar container */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
-.navbar-container {
+
+.navbar-brand-text {
+  font-size: 22px;
+  font-weight: 700;
+  color: #008DD0; /* your logo blue */
+  line-height: 1;
+}
+
+.navbar-logo {
+  height: 40px; /* adjust if needed */
+  width: auto;
+  display: block;
+}
+
+.navbar {
+  background-color: #f9f9f9; /* calm light gray/white */
+  color: #333;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
+
+/* Logo */
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #008DD0; /* brand blue as logo */
+  cursor: pointer;
 }
-.nav-links {
+
+/* Navigation */
+.navbar nav ul.nav-links {
+  list-style: none;
   display: flex;
   gap: 2rem;
-  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
-.nav-links li {
+
+.navbar nav ul.nav-links li {
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+/* Hover effect for links */
+.navbar nav ul.nav-links li:not(.signin):hover {
+  color: #008DD0; /* brand blue highlight */
+}
+
+/* Buttons inside nav */
+.navbar nav ul.nav-links li button,
+.navbar nav ul.nav-links li .nav-user {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 6px 12px;
+  border: 1px solid #0a3d91;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: 500;
-  transition: color 0.2s;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
-.nav-links li:hover {
-  color: var(--primary-blue);
+
+/* Login button style */
+.navbar nav ul.nav-links li button.login-btn {
+  background-color: #ffffff;
+  color: #008DD0;
 }
-.signin {
-  border: 1px solid var(--primary-blue);
-  padding: 0.3rem 0.8rem;
-  border-radius: 5px;
-  color: white;
+
+.navbar nav ul.nav-links li button.login-btn:hover {
+  background-color: #008DD0;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Logged in user badge style */
+.navbar nav ul.nav-links li .nav-user {
+  background-color: #e6f0ff; /* very light blue */
+  color: #0a3d91;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.navbar nav ul.nav-links li .nav-user span {
+  margin-left: 0.3rem;
+}
+
+/* Icons inside navbar */
+.navbar nav ul.nav-links li svg {
+  vertical-align: middle;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 50px;      /* adjust to fit your navbar */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05); /* subtle hover effect */
 }
 
 /* --- Hero --- */
@@ -65,7 +170,7 @@ body {
   text-align: center;
   padding: 6rem 2rem;
   position: relative;
-  background: url('./assets/landingpage.jpg') center/cover no-repeat;
+  background: url('../public/assets/landingpage.jpg') center/cover no-repeat;
   color: white; /* ensures text is readable */
 }
 
@@ -165,7 +270,7 @@ body {
 
 .service-icon {
   font-size: 3rem;
-  color: #1070CA; /* updated blue */
+  color: #008DD0; /* updated blue */
   margin-bottom: 1rem;
 }
 
@@ -254,7 +359,7 @@ body {
 
 /* --- Careers --- */
 .careers-section {
-  background-color: #1070CA; /* match your blue */
+  background-color: #008DD0; /* match your blue */
   padding: 4rem 2rem;
   color: white;
   clip-path: polygon(0 0, 100% 5vw, 100% 100%, 0% 100%);
@@ -341,7 +446,7 @@ body {
 .careers-info ul li {
   margin-bottom: 0.8rem;
   font-size: 1rem;
-  color: #1070CA; /* blue checkmarks */
+  color: #008DD0; /* blue checkmarks */
   position: relative;
   padding-left: 1.5rem;
 }
@@ -351,14 +456,14 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  color: #1070CA;
+  color: #008DD0;
   font-weight: bold;
   font-size: 1.2rem;
   line-height: 1;
 }
 
 .btn-primary {
-  background-color: #0d5a9f; /* slightly darker blue */
+  background-color: #008DD0; /* slightly darker blue */
   color: white;
   border: none;
   border-radius: 6px;
@@ -408,7 +513,7 @@ body {
 }
 
 .footer-link {
-  color: #1070ca;
+  color: #008DD0;
   text-decoration: none;
   font-size: 1rem;
   display: inline-flex;
@@ -427,7 +532,7 @@ body {
 }
 
 .footer-btn {
-  background-color: #1070ca;
+  background-color: #008DD0;
   color: white;
   border: none;
   padding: 0.75rem 2rem;
@@ -457,14 +562,14 @@ body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  color: #1070ca;
+  color: #008DD0;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
   font-size: 1.2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-  background-color: #1070ca;
+  background-color: #008DD0;
   color: white;
 }
 
@@ -493,7 +598,7 @@ body {
 }
 
 .small-link {
-  color: #1070ca;
+  color: #008DD0;
   text-decoration: none;
 }
 
@@ -522,3 +627,30 @@ body {
     text-align: center;
   }
 }
+/*Login CSS*/
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  gap: 1rem;
+}
+
+.login-container select,
+.login-container button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+}
+
+.login-container button {
+  background-color: #008DD0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #0d5ea8;
+}
+

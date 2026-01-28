@@ -1,0 +1,176 @@
+.tt-page {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.tt-header {
+    margin-bottom: 2rem;
+}
+
+.tt-header h1 {
+    margin-bottom: 0.25rem;
+}
+
+.tt-header p {
+    color: #666;
+}
+
+.tt-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.tt-form label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.tt-form input,
+.tt-form textarea {
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.tt-form button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    border: none;
+    background: #1070ca;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tt-form button:hover {
+    background: #084a81;
+}
+
+.tt-summary {
+    margin-top: 3rem;
+}
+
+.tt-entry {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.tt-muted {
+    color: #999;
+}
+
+/* ===== Calendar polish ===== */
+
+.react-calendar {
+    border: none;
+    width: 100%;
+    font-family: inherit;
+}
+
+.react-calendar__navigation button {
+    font-weight: 600;
+    color: #1070ca;
+}
+
+.react-calendar__tile {
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+}
+
+.react-calendar__tile--active {
+    background: #1070ca !important;
+    color: white;
+}
+
+.react-calendar__tile--now {
+    background: #eef4fb;
+}
+
+.tt-has-entry {
+    background: rgba(16, 112, 202, 0.15);
+    font-weight: 600;
+}
+
+/* ===== Buttons ===== */
+
+.tt-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.tt-danger {
+    background: #d64545;
+}
+
+.tt-danger:hover {
+    background: #b93838;
+}
+
+.tt-review-btn {
+    background: #1070ca; /* matches your blue */
+    color: white;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.2s;
+}
+
+.tt-review-btn:hover {
+    background: #0d5aa7;
+}
+
+.tt-dropdowns {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.tt-dropdowns label {
+    font-weight: 500;
+    color: #1070ca;
+}
+
+.tt-dropdowns select {
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.tt-dropdowns {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tt-dropdowns label {
+    font-weight: 500;
+    color: #1070ca;
+}
+
+.tt-dropdowns select {
+    margin-left: 0.5rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}

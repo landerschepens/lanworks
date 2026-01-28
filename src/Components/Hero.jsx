@@ -3,13 +3,12 @@ export default function Hero() {
     return (
         <section className="hero">
             <div className="container hero-container">
-                <h2>IT Consultancy That Empowers Your Business</h2>
+                <h2>Expertise-Driven IT. Secure. Future-Ready.</h2>
                 <p>
-                    We provide secure, scalable, and reliable IT solutions that drive growth and efficiency.
+                    We build trusted, long-term partnerships to help organizations operate securely, perform better, and grow with confidence.
                 </p>
                 <div className="hero-buttons">
-                    <button className="btn primary">Contact Us</button>
-                    <button className="btn secondary">Learn More</button>
+                    <button className="btn primary">Reach out</button>
                 </div>
             </div>
         </section>
