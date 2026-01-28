@@ -12,7 +12,7 @@ export default function Navbar() {
             <div className="container navbar-container">
                 <Link to="/" className="navbar-brand">
                     <img
-                        src="../../public/assets/lanworks_icon.png"  // replace with your image path
+                        src="/assets/lanworks_icon.png"  // replace with your image path
                         alt="Lanworks Logo"
                         className="navbar-logo"
                     />

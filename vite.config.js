@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  //base: '/lanworks', // must match your repo name
+  base: '/', // must match your repo name
   plugins: [react()],
 });
 

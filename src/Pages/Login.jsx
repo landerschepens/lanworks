@@ -14,7 +14,7 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const res = await fetch("http://localhost:4000/login", {
+        const res = await fetch("https://lanworks-backend.onrender.com/login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, password }),
@@ -34,7 +34,7 @@ export default function Login() {
         // ✅ THIS is what Navbar listens to
         setUser(data.user);
 
-        navigate("/");
+        navigate("/profile");
     };
 
     return (
