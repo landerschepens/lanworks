@@ -170,7 +170,7 @@ body {
   text-align: center;
   padding: 6rem 2rem;
   position: relative;
-  background: url('../public/assets/landingpage.jpg') center/cover no-repeat;
+  background: url('assets/landingpage.jpg') center/cover no-repeat;
   color: white; /* ensures text is readable */
 }
 

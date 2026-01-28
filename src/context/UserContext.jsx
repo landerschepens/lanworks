@@ -13,7 +13,7 @@ export function UserProvider({ children }) {
         setUser(null); // clear context
         localStorage.removeItem("user"); // clear localStorage
         // optional: redirect to homepage
-        window.location.href = "/";
+        window.location.href = "/lanworks";
     };
 
     useEffect(() => {

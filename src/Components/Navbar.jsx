@@ -3,6 +3,8 @@ import React, { useContext } from "react";
 import {Link, useNavigate} from "react-router-dom";
 import { FiUser, FiLogIn } from "react-icons/fi";
 import { UserContext } from "../context/UserContext";
+import lanworksIcon from '../assets/lanworks_icon.png';
+
 
 
 export default function Navbar() {
@@ -11,9 +13,9 @@ export default function Navbar() {
     return (
         <header className="navbar">
             <div className="container navbar-container">
-                <Link to="/" className="navbar-brand">
+                <Link to="/lanworks" className="navbar-brand">
                     <img
-                        src="/lanworks/public/assets/lanworks_icon.png" // replace with your image path
+                        src={lanworksIcon} // replace with your image path
                         alt="Lanworks Logo"
                         className="navbar-logo"
                     />
