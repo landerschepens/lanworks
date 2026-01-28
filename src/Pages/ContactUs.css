@@ -1,0 +1,178 @@
+.contact-page {
+    color: #0f172a;
+    background: #ffffff;
+}
+
+/* HERO */
+.contact-hero {
+    background: linear-gradient(180deg, #f6fbff 0%, #ffffff 100%);
+    border-bottom: 1px solid #e6eef5;
+    padding: 70px 18px 50px;
+}
+
+.contact-hero-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-hero h1 {
+    font-size: 40px;
+    font-weight: 750;
+    margin-bottom: 16px;
+    color: #008dd0; /* brand blue for hero title */
+}
+
+.contact-subtitle {
+    font-size: 16px;
+    color: #475569;
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+    /* subtle underline effect in yellow-green */
+    position: relative;
+}
+
+.contact-subtitle::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #f0e80e; /* brand green accent */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* FORM SECTION */
+.contact-form-section {
+    padding: 40px 18px 80px;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-success {
+    background: rgba(0, 141, 208, 0.08);
+    border: 1px solid rgba(0, 141, 208, 0.25);
+    padding: 14px 18px;
+    border-radius: 14px;
+    color: #0f172a;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.contact-success::before {
+    content: "✔";
+    color: #f0e80e; /* subtle green/yellow checkmark */
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+/* FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #008dd0; /* blue for labels */
+}
+
+input,
+textarea {
+    border: 1px solid #e6eef5;
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 14px;
+    outline: none;
+    transition: 160ms ease;
+    width: 100%;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #008dd0;
+    box-shadow: 0 0 0 3px rgba(0, 141, 208, 0.12);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #008dd0;
+    font-size: 16px;
+}
+
+.input-icon input {
+    padding-left: 36px;
+}
+
+.contact-btn {
+    padding: 12px 22px;
+    border-radius: 999px;
+    border: none;
+    background: #008dd0;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 160ms ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-btn:hover {
+    filter: brightness(0.95);
+}
+
+/* subtle hover accent in green/yellow */
+.contact-btn::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(240, 232, 14, 0.15); /* #f0e80e overlay */
+    transition: width 0.3s ease;
+}
+
+.contact-btn:hover::after {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}

@@ -17,8 +17,9 @@
   font-style: normal;
 }
 
-
-
+#root {
+  font-family: 'Inter', sans-serif;
+}
 
 /* --- Reset & base --- */
 * {
@@ -28,7 +29,6 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: #1f2937;
   background: white;
@@ -84,6 +84,7 @@ body {
 }
 
 /* Navigation */
+
 .navbar nav ul.nav-links {
   list-style: none;
   display: flex;
@@ -102,6 +103,7 @@ body {
 }
 
 /* Hover effect for links */
+
 .navbar nav ul.nav-links li:not(.signin):hover {
   color: #008DD0; /* brand blue highlight */
 }
@@ -122,6 +124,7 @@ body {
 }
 
 /* Login button style */
+
 .navbar nav ul.nav-links li button.login-btn {
   background-color: #ffffff;
   color: #008DD0;
@@ -377,7 +380,6 @@ body {
 
 .careers-left {
   flex: 1 1 350px;
-  font-family: 'Inter', sans-serif; /* or your chosen font */
 }
 
 .careers-left h2 {
@@ -483,10 +485,10 @@ body {
 }
 
 .footer {
-  background-color: #f1ede5; /* light beige */
+  background-color: rgba(255, 255, 255, 0.96); /* light beige */
+  border: rgba(15, 23, 42, 0.08);
   color: #111827;
   padding: 3rem 2rem 1.5rem;
-  font-family: "Quicksand", sans-serif;
 }
 
 .footer-container {
@@ -496,6 +498,7 @@ body {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto 2rem;
+  border: rgba(15, 23, 42, 0.08);
 }
 
 .footer-left, .footer-center, .footer-right {

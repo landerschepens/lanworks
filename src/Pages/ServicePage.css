@@ -1,0 +1,222 @@
+:root {
+    --brand: #008DD0;        /* primary blue */
+    --brand-yellow: #f0e80e; /* subtle accent yellow */
+    --bg: #ffffff;
+    --soft: #f6f9fc;
+    --text: #0f172a;
+    --muted: #5b677a;
+    --border: rgba(15, 23, 42, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    color: var(--text);
+    background: var(--bg);
+    font-family: "System UI", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* WRAPPER */
+.sec-wrap {
+    min-height: 100vh;
+}
+
+/* HERO */
+.sec-hero {
+    background: linear-gradient(
+            180deg,
+            rgba(0, 141, 208, 0.08),
+            rgba(0, 141, 208, 0.02),
+            rgba(0, 141, 208, 0)
+    );
+    border-bottom: 1px solid var(--border);
+}
+
+.sec-heroInner {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 56px 20px 42px 20px;
+}
+
+.sec-heroAccent {
+    width: 60px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--brand);
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.sec-heroAccent::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--brand-yellow);
+}
+
+.sec-heroTitle {
+    font-size: 44px;
+    line-height: 1.1;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.5px;
+}
+
+.sec-heroSubtitle {
+    margin: 0;
+    max-width: 850px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* LAYOUT */
+.sec-layout {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 28px 20px 70px 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 26px;
+}
+
+/* SIDEBAR */
+.sec-sidebar {
+    position: sticky;
+    top: 18px;
+    align-self: start;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 14px;
+    padding: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.sec-sidebarTitle {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.sec-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sec-navItem {
+    text-align: left;
+    border: 1px solid transparent;
+    background: transparent;
+    color: var(--muted);
+    padding: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 160ms ease;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.sec-navItem:hover {
+    background: rgba(0, 141, 208, 0.08);
+    color: var(--text);
+    border-color: rgba(0, 141, 208, 0.18);
+}
+
+/* MAIN */
+.sec-main {
+    padding: 6px 0 0 0;
+}
+
+.sec-section {
+    padding: 18px 0 34px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.sec-title {
+    margin: 0 0 12px 0;
+    font-size: 26px;
+    line-height: 1.25;
+    letter-spacing: -0.2px;
+}
+
+.sec-text {
+    margin: 0 0 16px 0;
+    white-space: pre-line;
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+.sec-text strong {
+    color: var(--brand-yellow);
+}
+
+.sec-text li::marker {
+    color: var(--brand-yellow);
+    font-weight: bold;
+}
+
+/* BUTTONS */
+.sec-moreBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(0, 141, 208, 0.35);
+    background: rgba(0, 141, 208, 0.06);
+    color: var(--brand);
+    padding: 10px 14px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 180ms ease;
+}
+
+.sec-moreBtn:hover {
+    background: rgba(0, 141, 208, 0.12);
+    border-color: rgba(0, 141, 208, 0.55);
+}
+
+/* FOOTER */
+.sec-footer {
+    padding-top: 28px;
+}
+
+.sec-footerLine {
+    height: 2px;
+    width: 80px;
+    border-radius: 999px;
+    background: rgba(0, 141, 208, 0.35);
+    margin-bottom: 12px;
+}
+
+/* MODAL */
+.sec-modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    z-index: 999;
+}
+
+.sec-modal {
+    width: 100%;
+    max-width: 640px;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+}

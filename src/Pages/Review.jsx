@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { loadEntries, saveEntries } from "../utils/storage";
-import "./Review.css";
+import "./ServicePage.css";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
 import autoTable from "jspdf-autotable";
