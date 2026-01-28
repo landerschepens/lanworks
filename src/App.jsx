@@ -29,7 +29,7 @@ export default function App() {
             <Navbar /> {/* ✅ ALWAYS mounted */}
 
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/lanworks" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route
                     path="/profile"

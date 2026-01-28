@@ -4,6 +4,7 @@ import {Link, useNavigate} from "react-router-dom";
 import { FiUser, FiLogIn } from "react-icons/fi";
 import { UserContext } from "../context/UserContext";
 
+
 export default function Navbar() {
     const { user } = useContext(UserContext);
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function Navbar() {
             <div className="container navbar-container">
                 <Link to="/" className="navbar-brand">
                     <img
-                        src="/assets/lanworks_icon.png"  // replace with your image path
+                        src="/lanworks/public/assets/lanworks_icon.png" // replace with your image path
                         alt="Lanworks Logo"
                         className="navbar-logo"
                     />

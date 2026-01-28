@@ -17,7 +17,7 @@ export default function Careers() {
                 <div className="careers-right">
                     <div className="careers-card">
                         <img
-                            src="../../public/assets/careers.png" // replace with your image path
+                            src="/lanworks/public/assets/careers.png" // replace with your image path
                             alt="Professional in suit adjusting tie"
                             className="careers-image"
                         />
